@@ -1,0 +1,8 @@
+query allActors{
+  allActors {
+    nodes {
+      firstName
+      lastName
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "graphile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "start:local-db": "docker-compose up",
+    "gen": "graphql-codegen --config codegen.yml",
+    "test:load": "artillery run ./tests/load/simple.yml"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-graphql": "^0.12.0",
+    "isomorphic-fetch": "^3.0.0",
+    "postgraphile": "^4.12.12"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^2.16.4",
+    "@graphql-codegen/jsdoc": "^2.3.6",
+    "@graphql-codegen/typescript": "^2.8.7",
+    "@graphql-codegen/typescript-operations": "^2.5.12",
+    "@graphql-codegen/typescript-urql": "^3.7.3",
+    "artillery": "^2.0.0-28"
+  }
+}
